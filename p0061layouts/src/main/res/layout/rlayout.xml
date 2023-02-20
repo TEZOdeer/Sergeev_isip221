@@ -9,13 +9,13 @@
         android:layout_height="wrap_content"
         android:text="Type here:">
     </TextView>
+
     <EditText
         android:id="@+id/entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/label"
-        android:background="@android:drawable/editbox_background">
-    </EditText>
+        android:background="@color/material_dynamic_neutral10"></EditText>
 
     <Button
         android:id="@+id/ok"
