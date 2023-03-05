@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="horizontal">
+
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_margin="30dp">
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:text="TextView"
-            android:layout_height="wrap_content"
             android:id="@+id/tvOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="50dp">
-        </TextView>
+            android:layout_marginBottom="50dp"
+            android:text="Нажмите на любую кнопку"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnStart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:onClick="onClickStart"
-            android:text="start"></Button>
+            android:text="start" />
 
         <Button
             android:id="@+id/btnStart2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:onClick="onClickStart2"
-            android:text="start"></Button>
+            android:text="start2" />
 
         <Button
-            android:id="@+id/btnAzaza"
+            android:id="@+id/btnNC"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickAzaza"
-            android:text="Button"
-            ></Button>
+            android:layout_height="80dp"
+            android:onClick="onClickNC"
+            android:text="СЕТЕВОЙ ГОРОД" />
+
+        <Button
+            android:id="@+id/btnNextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="onClickNextLayout"
+            android:text="Автор" />
 
     </LinearLayout>
 </LinearLayout>
