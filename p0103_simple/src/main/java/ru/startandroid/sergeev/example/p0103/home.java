@@ -39,4 +39,13 @@ public class home extends Activity {
         Intent AuthorApp = new Intent(home.this, author_app.class);
         home.this.startActivity(AuthorApp);
     }
+
+    public void btnRefresh (View v) {
+        Intent home = new Intent(home.this, home.class);
+        home.this.startActivity(home);
+    }
+
+    public void btnExit (View v) {
+        this.finishAffinity();
+    }
 }

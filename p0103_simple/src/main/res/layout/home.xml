@@ -18,7 +18,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="50dp"
             android:text="Нажмите на любую кнопку"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnStart"
@@ -54,6 +55,20 @@
             android:layout_height="80dp"
             android:onClick="onClickAuthor"
             android:text="Автор Start_Android" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="btnRefresh"
+            android:text="Обновить состояние" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="btnExit"
+            android:text="Закрыть приложение" />
 
     </LinearLayout>
 </LinearLayout>

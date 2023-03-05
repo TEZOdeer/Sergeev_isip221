@@ -26,7 +26,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -35,13 +35,14 @@
                     android:layout_gravity="bottom"
                     android:text="Автор сия чуда - Сергеев Владимир"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -56,7 +57,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -72,23 +73,45 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="20dp">
 
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="ГДЕ ДВА КИРПИЧА ?!?!?!"
+                    android:text="Данное приложение является Open Source. Вот ссылка:"
                     android:textAlignment="textStart"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:autoText="true"
+                    android:linksClickable="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="https://github.com/TEZOdeer/Sergeev_isip221/tree/main/p0103_simple"
+                    android:textColorLink="#3F51B5"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
         </TableLayout>
+
+
 
         <Button
             android:id="@+id/btnPrevious3"
