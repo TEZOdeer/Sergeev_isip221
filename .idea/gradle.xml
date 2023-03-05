@@ -17,6 +17,10 @@
             <option value="$PROJECT_DIR$/p0061layouts" />
             <option value="$PROJECT_DIR$/p0072_layoutprop" />
             <option value="$PROJECT_DIR$/p0081_viewbyld" />
+            <option value="$PROJECT_DIR$/p0091_onclickbuttons" />
+            <option value="$PROJECT_DIR$/p0101_listener" />
+            <option value="$PROJECT_DIR$/p0102_activitylistener" />
+            <option value="$PROJECT_DIR$/p0103_simple" />
             <option value="$PROJECT_DIR$/p0180constraintlayoutintro" />
           </set>
         </option>
