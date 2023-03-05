@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_x="140dp"
         android:layout_y="42dp"
-        android:text="Button"></Button>
+        android:text="KNOPKA"></Button>
 
     <TextView
         android:id="@+id/textView1"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_x="142dp"
         android:layout_y="131dp"
-        android:text="TextView">
+        android:text="TEKST">
     </TextView>
     <CheckBox
         android:id="@+id/checkBox1"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_x="55dp"
         android:layout_y="212dp"
-        android:text="CheckBox">
+        android:text="GALOCHKA">
     </CheckBox>
     <RadioButton
         android:id="@+id/radioButton1"
@@ -34,6 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_x="171dp"
         android:layout_y="318dp"
-        android:text="RadioButton">
+        android:text="kruG">
     </RadioButton>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="66dp"
+        android:layout_y="366dp"
+        android:text="KnopkA"></RadioButton>
 </AbsoluteLayout>

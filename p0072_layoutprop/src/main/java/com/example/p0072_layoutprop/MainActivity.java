@@ -1,4 +1,4 @@
-package ru.androidlessons.p0061layouts;
+package com.example.p0072_layoutprop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,10 +6,9 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tlayout);
+        setContentView(R.layout.activity_main);
     }
 }
