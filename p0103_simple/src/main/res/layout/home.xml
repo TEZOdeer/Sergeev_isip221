@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:text="Нажмите на любую кнопку"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="onClickStart"
+            android:text="start" />
+
+        <Button
+            android:id="@+id/btnStart2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="onClickStart2"
+            android:text="start2" />
+
+        <Button
+            android:id="@+id/btnPovar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="onClickPovar"
+            android:text="POVAR" />
+
+        <Button
+            android:id="@+id/btnAuthorApp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="btnAuthorApp"
+            android:text="Автор приложения" />
+
+        <Button
+            android:id="@+id/btnAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="onClickAuthor"
+            android:text="Автор Start_Android" />
+
+    </LinearLayout>
+</LinearLayout>
