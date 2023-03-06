@@ -21,7 +21,9 @@
             <option value="$PROJECT_DIR$/p0101_listener" />
             <option value="$PROJECT_DIR$/p0102_activitylistener" />
             <option value="$PROJECT_DIR$/p0103_simple" />
+            <option value="$PROJECT_DIR$/p0111_resvalues" />
             <option value="$PROJECT_DIR$/p0180constraintlayoutintro" />
+            <option value="$PROJECT_DIR$/ratingimages" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">P0111_ResValues</string>
+    <string name="string_hello">string/hello</string>
+</resources>

@@ -38,11 +38,11 @@
             android:text="start2" />
 
         <Button
-            android:id="@+id/btnPovar"
+            android:id="@+id/btnDY"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:onClick="onClickPovar"
-            android:text="POVAR" />
+            android:layout_height="wrap_content"
+            android:onClick="btnDY"
+            android:text="Образовательная онлайн платформа ГАПОУ РС(Я) Якутский колледж связи и энергетики им. П.И. Дудкина" />
 
         <Button
             android:id="@+id/btnAuthorApp"
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:onClick="btnRefresh"
-            android:text="Обновить состояние" />
+            android:text="Обновить состояние приложения" />
 
         <Button
             android:id="@+id/btnExit"
