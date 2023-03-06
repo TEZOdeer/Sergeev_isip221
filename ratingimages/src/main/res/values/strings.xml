@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Оценивание картинок животных</string>
+    <string name="app_name">RatingImages</string>
     <string name="edit_message">write something smart</string>
     <string name="button_send">GO!</string>
 </resources>
