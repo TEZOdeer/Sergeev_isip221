@@ -1,11 +1,15 @@
 package ru.sergeev.guess_the_number;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +25,7 @@ public class Easy extends AppCompatActivity {
     boolean gameFinished;
     int lifes;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +38,13 @@ public class Easy extends AppCompatActivity {
         lifes_count = (TextView) findViewById(R.id.lifes_count);
         Restart.setEnabled(false);
         gameFinished = false;
-        guess = (int)(Math.random()*10);
+        guess = (int) (Math.random() * 10);
         lifes = 3;
-        value=-1;
+        value = -1;
         lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
     }
 
-    public void BtnClick(View v) {
+        public void BtnClick(View v) {
         lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
         try {
             value = Integer.parseInt(etinput.getText().toString());
@@ -93,7 +98,6 @@ public class Easy extends AppCompatActivity {
             etinput.setEnabled(false);
             lifes_count.setText(String.valueOf(guess));
         }
-
     }
     public void Exit (View v) {
         finishAffinity();
