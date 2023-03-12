@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".About">
 
     <TableLayout
         android:layout_width="0dp"
@@ -19,60 +19,69 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/tvinfo"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/try_to_guess"
-                android:textAlignment="center" />
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/about_title"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAlignment="center">
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/author" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/lifes_count"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/left_lifes"
-                android:textAlignment="center" />
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/about_text"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            <EditText
-                android:id="@+id/etinput"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/hint"
-                android:inputType="number"
-                android:maxLength="6"
-                android:textAlignment="center" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/Btn"
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="BtnClick"
-                android:text="@string/input_value" />
+                android:autoLink="web"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/link"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textColorLink="#000DFF" />
         </TableRow>
 
         <TableRow
@@ -80,12 +89,12 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Restart"
+                android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="again"
-                android:text="@string/restart" />
+                android:onClick="Back"
+                android:text="@string/back" />
         </TableRow>
 
         <TableRow
@@ -100,6 +109,5 @@
                 android:onClick="Exit"
                 android:text="@string/exit" />
         </TableRow>
-
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

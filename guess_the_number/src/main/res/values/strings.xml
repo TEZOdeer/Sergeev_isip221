@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Try to Guess</string>
+    <string name="app_name">Guess The Number</string>
     <string name="behind">Недолёт!</string>
     <string name="ahead">Перелёт!</string>
     <string name="hit">Поздравляю! ВЫ угадали число! Разработчик гордится вами! Шанс того, что вы угадаете число был около 0,00000001%!</string>
@@ -14,4 +14,16 @@
     <string name="hint">0–10</string>
     <string name="over">Вы програли! Правильное число:&#160;</string>
     <string name="left_lifes">Осталось попыток:&#160;</string>
+    <string name="set_difficult">Выберите уровень сложности:</string>
+    <string name="easy">Лёгкий</string>
+    <string name="normal">Средний</string>
+    <string name="hard">Максимальный</string>
+    <string name="hard_lifes">У вас одна попытка!</string>
+    <string name="change_difficult">Поменять сложность</string>
+    <string name="GTN">Guess The Number</string>
+    <string name="about">Об разработчике</string>
+    <string name="about_title">Разработал студент 1-го курса Группы ИСИП22/1 Сергеев Владимир</string>
+    <string name="back">Вернуться в меню</string>
+    <string name="about_text">Приложение разрабатывалось в течении 2-3 дней. Было потраченно суммарно 72 человека-часа. Приложение является Open Source: </string>
+    <string name="link">https://github.com/TEZOdeer/Sergeev_isip221/tree/main/guess_the_number</string>
 </resources>

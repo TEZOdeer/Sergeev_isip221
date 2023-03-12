@@ -1,23 +1,15 @@
 package ru.sergeev.guess_the_number;
 
-import static android.app.PendingIntent.getActivity;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Normal extends AppCompatActivity {
 
     TextView tvinfo;
     TextView lifes_count;
@@ -32,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.gameplay);
 
         tvinfo = (TextView) findViewById(R.id.tvinfo);
         etinput = (EditText) findViewById(R.id.etinput);
@@ -42,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Restart.setEnabled(false);
         gameFinished = false;
         guess = (int)(Math.random()*10);
-        lifes = 3;
+        lifes = 2;
         value=-1;
         lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
     }
@@ -85,14 +77,13 @@ public class MainActivity extends AppCompatActivity {
             Btn.setText(R.string.input_value);
             tvinfo.setText(R.string.try_to_guess);
             gameFinished = false;
-            lifes = 3;
+            lifes = 2;
             lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
         }
         if (gameFinished==true) {
             Btn.setEnabled(false);
             Restart.setEnabled(true);
             etinput.setEnabled(false);
-            lifes = 3;
             lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
         }
         if (lifes==0) {
@@ -106,9 +97,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Exit (View v) {
         finishAffinity();
+        overridePendingTransition(0, 0);
     }
     public void again (View v) {
-        Intent Main = new Intent(this, MainActivity.class);
+        Intent Main = new Intent(this, Normal.class);
         this.startActivity(Main);
+        overridePendingTransition(0, 0);
+    }
+    public void Change (View v) {
+        Intent Menu = new Intent(this, ru.sergeev.guess_the_number.Menu.class);
+        this.startActivity(Menu);
+        overridePendingTransition(0, 0);
     }
 }
