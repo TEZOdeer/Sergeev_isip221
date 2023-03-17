@@ -43,7 +43,6 @@ public class Custom_gameplay extends AppCompatActivity {
         if(arguments!=null){
             minimal = Integer.parseInt(arguments.get("min").toString());
             maximal = Integer.parseInt(arguments.get("max").toString());
-            guess = Integer.parseInt(arguments.get("guess").toString());
             lifes = Integer.parseInt(arguments.get("tries").toString());
             value = -1;
             lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
@@ -57,6 +56,7 @@ public class Custom_gameplay extends AppCompatActivity {
 
     public void BtnClick(View v) {
         Bundle arguments = getIntent().getExtras();
+        guess = Integer.parseInt(arguments.get("guess").toString());
         minimal = Integer.parseInt(arguments.get("min").toString());
         maximal = Integer.parseInt(arguments.get("max").toString());
         mini = minimal;
