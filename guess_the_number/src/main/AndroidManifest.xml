@@ -7,11 +7,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
+        <activity
+            android:name=".Custom"
+            android:exported="false" />
         <activity
             android:name=".Menu"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,20 +22,24 @@
         </activity>
         <activity
             android:name=".Easy"
-            android:screenOrientation="portrait"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Normal"
-            android:screenOrientation="portrait"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Hard"
-            android:screenOrientation="portrait"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".About"
-            android:screenOrientation="portrait"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Custom_gameplay"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

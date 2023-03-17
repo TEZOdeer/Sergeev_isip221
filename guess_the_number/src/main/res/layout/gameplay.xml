@@ -24,7 +24,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/tvinfo"
+                android:id="@+id/tvinfo_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -41,7 +41,7 @@
             android:textAlignment="center">
 
             <TextView
-                android:id="@+id/lifes_count"
+                android:id="@+id/tvinfo_tries"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -73,7 +73,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Btn"
+                android:id="@+id/Start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -26,6 +26,8 @@
             <option value="$PROJECT_DIR$/p0111_resvalues" />
             <option value="$PROJECT_DIR$/p0180constraintlayoutintro" />
             <option value="$PROJECT_DIR$/ratingimages" />
+            <option value="$PROJECT_DIR$/ta" />
+            <option value="$PROJECT_DIR$/tabbedactivity" />
           </set>
         </option>
       </GradleProjectSettings>

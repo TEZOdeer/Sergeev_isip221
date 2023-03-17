@@ -5,13 +5,13 @@
     <string name="hit">Поздравляю! ВЫ угадали число! Разработчик гордится вами! Шанс того, что вы угадаете число был около 0,00000001%!</string>
     <string name="input_value">Попытать счастье</string>
     <string name="play_more">Сыграть ещё</string>
-    <string name="try_to_guess">Попробуйте угадать число (0 &#8211; 10)</string>
+    <string name="try_to_guess">Попробуйте угадать число (1 &#8211; 10)</string>
     <string name="error">Неверный ввод!</string>
     <string name="exit">Выйти из приложения</string>
-    <string name="correct">Введите число от 0 до 10!</string>
+    <string name="correct">Введите число от 1 до 10!</string>
     <string name="input">Введите число</string>
     <string name="restart">Ещё раз!</string>
-    <string name="hint">0–10</string>
+    <string name="hint">1–10</string>
     <string name="over">Вы програли! Правильное число:&#160;</string>
     <string name="left_lifes">Осталось попыток:&#160;</string>
     <string name="set_difficult">Выберите уровень сложности:</string>
@@ -26,4 +26,16 @@
     <string name="back">Вернуться в меню</string>
     <string name="about_text">Приложение разрабатывалось в течении 2-3 дней. Было потраченно суммарно 72 человека-часа. Приложение является Open Source: </string>
     <string name="link">https://github.com/TEZOdeer/Sergeev_isip221/tree/main/guess_the_number</string>
+    <string name="custom_parametr1">Введите минимальное число</string>
+    <string name="custom_parametr2">Введите максимальное число</string>
+    <string name="custom_parametr3">Введите количество попыток</string>
+    <string name="custom_start">Начать</string>
+    <string name="tvinfo_min_fail">Введите правильное значение!</string>
+    <string name="tvinfo_max_fail">Введите правильное значение!</string>
+    <string name="tvinfo_tries_fail">Введите правильное значение!</string>
+    <string name="Custom_difficult">"Кустомная"</string>
+    <string name="Any">Введите любое числовое значение</string>
+    <string name="correct_first">Введите число от</string>
+    <string name="correct_second">до</string>
+    <string name="correct_start">Проверьте правильность всех значений</string>
 </resources>

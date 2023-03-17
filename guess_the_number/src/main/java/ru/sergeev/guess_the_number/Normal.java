@@ -26,14 +26,14 @@ public class Normal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameplay);
 
-        tvinfo = (TextView) findViewById(R.id.tvinfo);
+        tvinfo = (TextView) findViewById(R.id.tvinfo_min);
         etinput = (EditText) findViewById(R.id.etinput);
-        Btn = (Button) findViewById(R.id.Btn);
+        Btn = (Button) findViewById(R.id.Start);
         Restart = (Button) findViewById(R.id.Restart);
-        lifes_count = (TextView) findViewById(R.id.lifes_count);
+        lifes_count = (TextView) findViewById(R.id.tvinfo_tries);
         Restart.setEnabled(false);
         gameFinished = false;
-        guess = (int)(Math.random()*10);
+        guess = 1 + (int) (Math.random() * ((10 - 1) + 1));
         lifes = 2;
         value=-1;
         lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
@@ -49,7 +49,7 @@ public class Normal extends AppCompatActivity {
 
 
         if (!gameFinished) {
-            if (value > 10 | value < 0) {
+            if (value > 10 | value <= 0) {
                 tvinfo.setText(R.string.correct);
                 lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
             }
@@ -67,13 +67,13 @@ public class Normal extends AppCompatActivity {
                 tvinfo.setText(R.string.hit);
                 gameFinished = true;
             }
-            else if (value < 0) {
+            else if (value <= 0) {
                 tvinfo.setText(R.string.correct);
                 lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
             }
         }
         else {
-            guess = (int) (Math.random() * 10);
+            guess = 1 + (int) (Math.random() * ((10 - 1) + 1));
             Btn.setText(R.string.input_value);
             tvinfo.setText(R.string.try_to_guess);
             gameFinished = false;

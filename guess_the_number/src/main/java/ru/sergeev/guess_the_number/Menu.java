@@ -1,13 +1,11 @@
 package ru.sergeev.guess_the_number;
 
-import static android.app.PendingIntent.getActivity;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity {
 
@@ -59,7 +57,11 @@ public class Menu extends AppCompatActivity {
         overridePendingTransition(0, 0);
 
     }
-
+    public void BtnCustom (View v) {
+        Intent Custom = new Intent(this, ru.sergeev.guess_the_number.Custom.class);
+        startActivity(Custom);
+        overridePendingTransition(0, 0);
+    }
 
     /*public void onClick(View v) {
         switch (v.getId()) {
