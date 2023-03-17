@@ -6,12 +6,14 @@
     <string name="input_value">Попытать счастье</string>
     <string name="play_more">Сыграть ещё</string>
     <string name="try_to_guess">Попробуйте угадать число (1 &#8211; 10)</string>
+    <string name="try_to_guess_first">Попробуйте угадать число (&#160;</string>
+    <string name="try_to_guess_second">&#160;)</string>
     <string name="error">Неверный ввод!</string>
     <string name="exit">Выйти из приложения</string>
     <string name="correct">Введите число от 1 до 10!</string>
     <string name="input">Введите число</string>
     <string name="restart">Ещё раз!</string>
-    <string name="hint">1–10</string>
+    <string name="hint">Введите значение</string>
     <string name="over">Вы програли! Правильное число:&#160;</string>
     <string name="left_lifes">Осталось попыток:&#160;</string>
     <string name="set_difficult">Выберите уровень сложности:</string>
@@ -35,7 +37,7 @@
     <string name="tvinfo_tries_fail">Введите правильное значение!</string>
     <string name="Custom_difficult">"Кустомная"</string>
     <string name="Any">Введите любое числовое значение</string>
-    <string name="correct_first">Введите число от</string>
-    <string name="correct_second">до</string>
+    <string name="correct_first">Введите число от&#160;</string>
+    <string name="correct_second">&#160;до&#160;</string>
     <string name="correct_start">Проверьте правильность всех значений</string>
 </resources>

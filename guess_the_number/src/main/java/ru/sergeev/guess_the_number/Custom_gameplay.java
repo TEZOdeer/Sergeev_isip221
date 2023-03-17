@@ -38,7 +38,6 @@ public class Custom_gameplay extends AppCompatActivity {
         lifes_count = (TextView) findViewById(R.id.tvinfo_tries);
         Restart.setEnabled(false);
         gameFinished = false;
-        getIntent().getExtras();
         //Метод для генерации случайного числа в определённом интервале
         Bundle arguments = getIntent().getExtras();
         if(arguments!=null){
@@ -48,8 +47,12 @@ public class Custom_gameplay extends AppCompatActivity {
             lifes = Integer.parseInt(arguments.get("tries").toString());
             value = -1;
             lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
+            mini = minimal;
+            maxi = maximal;
         }
-
+        tvinfo.setText(getResources().getString(R.string.try_to_guess_first) + String.valueOf(mini) +
+                " - " + String.valueOf(maxi) + getResources().getString(R.string.try_to_guess_second));
+        etinput.setHint(R.string.hint);
     }
 
     public void BtnClick(View v) {
@@ -67,7 +70,8 @@ public class Custom_gameplay extends AppCompatActivity {
         }
         if (!gameFinished) {
             if (value > maximal | value < minimal) {
-                tvinfo.setText(R.string.correct_first + String.valueOf(mini));
+                tvinfo.setText(String.valueOf(getResources().getString(R.string.correct_first) + String.valueOf(mini)
+                        + String.valueOf(getResources().getString(R.string.correct_second)) + String.valueOf(maxi)));
                 lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
             } else if (value > guess) {
                 tvinfo.setText(R.string.ahead);
@@ -81,7 +85,8 @@ public class Custom_gameplay extends AppCompatActivity {
                 tvinfo.setText(R.string.hit);
                 gameFinished = true;
             } else if (value < minimal) {
-                tvinfo.setText(R.string.correct);
+                tvinfo.setText(String.valueOf(getResources().getString(R.string.correct_first) + String.valueOf(mini)
+                        + String.valueOf(getResources().getString(R.string.correct_second)) + String.valueOf(maxi)));
                 lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
             }
         } else {
@@ -92,7 +97,9 @@ public class Custom_gameplay extends AppCompatActivity {
                 value = -1;
                 lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
             Btn.setText(R.string.input_value);
-            tvinfo.setText(R.string.try_to_guess);
+            etinput.setHint(R.string.hint);
+            tvinfo.setText(getResources().getString(R.string.try_to_guess_first) + String.valueOf(mini) +
+                    " - " + String.valueOf(maxi) + getResources().getString(R.string.try_to_guess_second));
             gameFinished = false;
         }
         if (gameFinished == true) {
@@ -119,7 +126,9 @@ public class Custom_gameplay extends AppCompatActivity {
         Btn.setEnabled(true);
         Restart.setEnabled(false);
         Bundle arguments = getIntent().getExtras();
-        tvinfo.setText(R.string.try_to_guess);
+        etinput.setHint(R.string.hint);
+        tvinfo.setText(getResources().getString(R.string.try_to_guess_first) + String.valueOf(mini) +
+                " - " + String.valueOf(maxi) + getResources().getString(R.string.try_to_guess_second));
         if(arguments!=null){
             minimal = Integer.parseInt(arguments.get("min").toString());
             maximal = Integer.parseInt(arguments.get("max").toString());
