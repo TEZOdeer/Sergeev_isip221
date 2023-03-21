@@ -3,6 +3,7 @@
     <string name="behind">Недолёт!</string>
     <string name="ahead">Перелёт!</string>
     <string name="hit">Поздравляю! ВЫ угадали число! Разработчик гордится вами! Шанс того, что вы угадаете число был около 0,00000001%!</string>
+    <string name="hit2">Поздравляю! ВЫ угадали число! Разработчик гордится вами! Шанс того, что вы угадаете число был около:&#160;</string>
     <string name="input_value">Попытать счастье</string>
     <string name="play_more">Сыграть ещё</string>
     <string name="try_to_guess">Попробуйте угадать число (1 &#8211; 10)</string>
