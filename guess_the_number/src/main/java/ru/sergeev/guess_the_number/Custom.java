@@ -37,6 +37,7 @@ public class Custom extends AppCompatActivity {
         guess = 0;
         full = false;
 
+
     }
 
     public void Start(View v) {
@@ -62,14 +63,11 @@ public class Custom extends AppCompatActivity {
         }
 
 
-        if (full == true) {
-
-            guess = min + (int) (Math.random() * ((max - min) + 1));
+        if (full) {
             Intent Start = new Intent(this, Custom_gameplay.class);
             Start.putExtra("min", min);
             Start.putExtra("max", max);
             Start.putExtra("tries", tries);
-            Start.putExtra("guess", guess);
             startActivity(Start);
             overridePendingTransition(0, 0);
         }

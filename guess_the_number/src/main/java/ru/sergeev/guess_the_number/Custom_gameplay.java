@@ -1,6 +1,7 @@
 package ru.sergeev.guess_the_number;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,12 +25,17 @@ public class Custom_gameplay extends AppCompatActivity {
     int maximal;
     int mini;
     int maxi;
+    int tries;
 
-
+    private SharedPreferences appPreferences;
+    private SharedPreferences.Editor appPreferencesEdit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameplay);
+
+        appPreferences = getSharedPreferences("APP_PREFERENCES", MODE_PRIVATE);
+        appPreferencesEdit = appPreferences.edit();
 
         tvinfo = (TextView) findViewById(R.id.tvinfo_min);
         etinput = (EditText) findViewById(R.id.etinput);
@@ -38,7 +44,6 @@ public class Custom_gameplay extends AppCompatActivity {
         lifes_count = (TextView) findViewById(R.id.tvinfo_tries);
         Restart.setEnabled(false);
         gameFinished = false;
-        //Метод для генерации случайного числа в определённом интервале
         Bundle arguments = getIntent().getExtras();
         if(arguments!=null){
             minimal = Integer.parseInt(arguments.get("min").toString());
@@ -48,20 +53,22 @@ public class Custom_gameplay extends AppCompatActivity {
             lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
             mini = minimal;
             maxi = maximal;
+            tries = lifes;
         }
         tvinfo.setText(getResources().getString(R.string.try_to_guess_first) + String.valueOf(mini) +
                 " - " + String.valueOf(maxi) + getResources().getString(R.string.try_to_guess_second));
         etinput.setHint(R.string.hint);
+        guess = mini + (int) (Math.random() * ((maxi - mini) + 1));
     }
-
-    public void BtnClick(View v) {
+       public void BtnClick(View v) {
         Bundle arguments = getIntent().getExtras();
-        guess = Integer.parseInt(arguments.get("guess").toString());
-        minimal = Integer.parseInt(arguments.get("min").toString());
-        maximal = Integer.parseInt(arguments.get("max").toString());
-        mini = minimal;
-        maxi = maximal;
-
+        if(arguments!=null) {
+            minimal = Integer.parseInt(arguments.get("min").toString());
+            maximal = Integer.parseInt(arguments.get("max").toString());
+            mini = minimal;
+            maxi = maximal;
+            tries = lifes;
+        }
         lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
         try {
             value = Integer.parseInt(etinput.getText().toString());
@@ -92,7 +99,6 @@ public class Custom_gameplay extends AppCompatActivity {
         } else {
                 minimal = Integer.parseInt(arguments.get("min").toString());
                 maximal = Integer.parseInt(arguments.get("max").toString());
-                guess = Integer.parseInt(arguments.get("guess").toString());
                 lifes = Integer.parseInt(arguments.get("tries").toString());
                 value = -1;
                 lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
@@ -100,6 +106,7 @@ public class Custom_gameplay extends AppCompatActivity {
             etinput.setHint(R.string.hint);
             tvinfo.setText(getResources().getString(R.string.try_to_guess_first) + String.valueOf(mini) +
                     " - " + String.valueOf(maxi) + getResources().getString(R.string.try_to_guess_second));
+            guess = mini + (int) (Math.random() * ((maxi - mini) + 1));
             gameFinished = false;
         }
         if (gameFinished == true) {
@@ -121,23 +128,31 @@ public class Custom_gameplay extends AppCompatActivity {
         overridePendingTransition(0, 0);
     }
     public void again (View v) {
+        /*
         etinput.setText("");
         etinput.setEnabled(true);
         Btn.setEnabled(true);
         Restart.setEnabled(false);
         Bundle arguments = getIntent().getExtras();
+        guess = mini + (int) (Math.random() * ((maxi - mini) + 1));
         etinput.setHint(R.string.hint);
         tvinfo.setText(getResources().getString(R.string.try_to_guess_first) + String.valueOf(mini) +
                 " - " + String.valueOf(maxi) + getResources().getString(R.string.try_to_guess_second));
+        guess = minimal + (int) (Math.random() * ((maximal - minimal) + 1));
         if(arguments!=null){
             minimal = Integer.parseInt(arguments.get("min").toString());
             maximal = Integer.parseInt(arguments.get("max").toString());
-            guess = minimal + (int) (Math.random() * maximal);
             lifes = Integer.parseInt(arguments.get("tries").toString());
             value = -1;
             lifes_count.setText(String.valueOf(getResources().getString(R.string.left_lifes) + lifes));
         }
-        guess = minimal + (int)(Math.random() * ((maximal - minimal) + 1));
+        */
+        Intent Again = new Intent(Custom_gameplay.this, Custom_gameplay.class);
+        startActivity(Again);
+        Again.putExtra("min", minimal);
+        Again.putExtra("max", maximal);
+        Again.putExtra("tries", tries);
+        overridePendingTransition(0, 0);
     }
     public void Change (View v) {
         Intent Menu = new Intent(this, ru.sergeev.guess_the_number.Menu.class);

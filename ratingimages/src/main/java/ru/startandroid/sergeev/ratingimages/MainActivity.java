@@ -1,11 +1,9 @@
 package ru.startandroid.sergeev.ratingimages;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         imageView = (ImageView) findViewById(R.id.imageView);
     }
-
+/*
     public void btnDislike (View v) {
         Intent home = new Intent(MainActivity.this, MainActivity.class);
         MainActivity.this.startActivity(home);
@@ -29,4 +27,5 @@ public class MainActivity extends AppCompatActivity {
         Intent home = new Intent(MainActivity.this, MainActivity.class);
         MainActivity.this.startActivity(home);
     }
+ */
 }
